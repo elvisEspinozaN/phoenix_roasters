@@ -1,9 +1,9 @@
 // colors
-$primary-color: #68686885;
-$secondary-color: #a7daf1;
+$primary-color: #d53030;
+$secondary-color: #d53030;
 $third-color: #e29999;
 $white-color: #ffffff;
-$green-color: #36e726;
+$green-color: #0062cc;
 $off-white-color: #f2f2f2;
 $black-color: #000;
 $txt-white: #61abf0;
@@ -39,29 +39,6 @@ $border-radius: 6px;
   }
 }
 
-// .home_fav__products {
-//   &__heading {
-//     text-align: center;
-//   }
-
-//   &__slick {
-//     &__slide {
-//       padding: 0 20px;
-
-//       &__cont {
-//         box-shadow: $pan-shadow;
-//         text-align: center;
-//         background: $secondary-color;
-//         padding: 15px;
-//         border-radius: $border-radius;
-
-//         &__name {
-//           color: $white-color;
-//         }
-//       }
-//     }
-//   }
-// }
 .home {
   &_lay {
     padding-top: 50px;
@@ -76,6 +53,13 @@ $border-radius: 6px;
     &__slick {
       &__slide {
         padding: 0 16px;
+
+        &__img {
+          float: inline-start;
+          width: 246px;
+          height: 246px;
+          object-fit: cover;
+        }
 
         &__cont {
           box-shadow: $pan-shadow;
@@ -96,6 +80,10 @@ $border-radius: 6px;
   max-width: 100%;
   margin: auto;
   display: block;
+  // float: inline-start;
+  width: 350px;
+  height: 350px;
+  // object-fit: cover;
 }
 
 .ali {

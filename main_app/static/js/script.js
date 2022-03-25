@@ -34,7 +34,7 @@ $(".home_fav__products__slick").slick({
   arrows: false,
   dots: false,
   autoplay: true,
-  autoplaySpeed: 2500,
+  autoplaySpeed: 550,
   responsive: [
     {
       breakpoint: 600,

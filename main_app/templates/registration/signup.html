@@ -1,52 +1,41 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-  </head>
-  <body>
-    <section class="myform-area">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="form-area login-form">
-              <div class="form-content">
-                <h2>Sign up</h2>
-                <p>Sign up to access your cart.</p>
-                <ul>
-                  <li>
-                    <a href="#" class="facebook"
-                      ><i class="fa fa-facebook-f"></i><span>facebook</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="twitter"
-                      ><i class="fa fa-twitter"></i><span>twitter</span></a
-                    >
-                  </li>
-                </ul>
+<section class="myform-area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="form-area login-form">
+          <div class="form-content">
+            <h2>Sign up</h2>
+            <p>Sign up to access your cart.</p>
+            <ul>
+              <li>
+                <a href="#" class="facebook"
+                  ><i class="fa fa-facebook-f"></i><span>facebook</span></a
+                >
+              </li>
+              <li>
+                <a href="#" class="twitter"
+                  ><i class="fa fa-twitter"></i><span>twitter</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="form-input">
+            <h2>Sign Up Form</h2>
+            <form method="POST">
+              {% csrf_token %} {{ signup_form.as_p }}
+              <div class="form-group"></div>
+              <div class="form-group"></div>
+              <div class="myform-button">
+                <button class="myform-btn">Sign Up</button>
               </div>
-              <div class="form-input">
-                <h2>Sign Up Form</h2>
-                <form method="POST">
-                  {% csrf_token %} {{ signup_form.as_p }}
-                  <div class="form-group"></div>
-                  <div class="form-group"></div>
-                  <div class="myform-button">
-                    <button class="myform-btn">Sign Up</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
-    </section>
-  </body>
-</html>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
