@@ -36,7 +36,8 @@
                 max="10"
                 placeholder="Quantity"
               />
-              <button id="shoppingcarts_add" class="button button_add" type="submit">Add to Cart</button>
+              <a href="{% url 'shoppingcarts_add' product.id %}">Add</a>
+              <!-- <button id="shoppingcarts_add" class="button button_add" type="submit">Add to Cart</button> -->
             </input>
             </div>
             <!-- <input type="submit" value="add to cart"> -->
