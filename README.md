@@ -61,9 +61,10 @@ Your needs are ever changing, phoenix is able to grow along with you.
 ### Built With
 
 - [Django](https://djangoproject.com)
-- [JavaScript](https://javascript.com)
 - [Python](https://python.org)
+- [Heroku](https://www.heroku.com/)
 - [Postgresql](https://postgresql.org)
+- [JavaScript](https://javascript.com)
 - [Sass](https://sass-lang.com)
 - [Bootstrap](https://getbootstrap.com)
 

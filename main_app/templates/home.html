@@ -20,10 +20,20 @@
                 src="../static/images/coffee1.png"
                 alt="First slide"
               />
-              <div class="carousel-caption d-none d-md-block">
-                <h5 class="text-white">WELCOME TO PHOENIX ROASTERS</h5>
+              <div
+                class="carousel-caption d-none d-md-block"
+                style="top: 45%; bottom: auto; font-size: large"
+              >
+                <h1 id="caption1" class="text-white">
+                  WELCOME TO PHOENIX ROASTERS
+                </h1>
                 <a href="{% url 'index' %}">
-                  <button class="text-white but btn">BUY COFFEES</button>
+                  <button
+                    class="text-white but btn btn-outline-danger"
+                    style="background-color: transparent; border-color: #ccc"
+                  >
+                    BUY COFFEES
+                  </button>
                 </a>
               </div>
             </div>
@@ -33,14 +43,14 @@
                 src="../static/images/coffee2.png"
                 alt="Second slide"
               />
-              <div id="carousel2" class="carousel-caption d-none d-md-block">
-                <h5 class="text-white">TIME TO DISCOVER</h5>
-                <h5 class="text-white">PHOENIX ROASTERS</h5>
-                <a href="{% url 'about' %}">
-                  <button class="text-white but btn">
-                    LEARN MORE <i class="bi bi-arrow-right-circle"></i>
-                  </button>
-                </a>
+              <div
+                class="carousel-caption d-none d-md-block"
+                style="top: 45%; bottom: auto; font-size: large"
+              >
+                <h1 id="caption1" class="text-white">
+                  LEAVE YOUR LIFE WITH ENERGY
+                </h1>
+                <a href="{% url 'index' %}"> </a>
               </div>
             </div>
             <div class="carousel-item">
@@ -49,64 +59,87 @@
                 src="../static/images/coffee20.png"
                 alt="Third slide"
               />
+
+              <div
+                class="carousel-caption d-none d-md-block"
+                style="top: 45%; bottom: auto; font-size: large"
+              >
+                <h1 id="caption1" class="text-white">
+                  TIME TO DISCOVER PHOENIX ROASTERS
+                </h1>
+                <a href="{% url 'about' %}">
+                  <button
+                    class="text-white but btn btn-outline-danger"
+                    style="background-color: transparent; border-color: #ccc"
+                  >
+                    LEARN MORE
+                  </button>
+                </a>
+              </div>
             </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Carousel wrapper -->
-<br />
+  <!-- Carousel wrapper -->
+  <br />
 
-<div class="home">
-  <div class="container">
-    <section class="row home_lay">
-      <div class="col-md-12">
-        <h3 class="home_fav__products__heading">What's Your Favorite?</h3>
-      </div>
-      <div class="col-12">
-        <div class="home_fav__products__slick">
-          {% for product in products %}
-          <div class="home_fav__products__slick__slide">
-            <a href="{% url 'detail' product.id %}">
-              <img
-                src="{{product.image_url}}"
-                alt="{{product.name}}"
-                class="img_resp home_fav__products__slick__slide__img home_fav__products__slick__slide__cont__img"
-              />
-              <div class="home_fav__products__slick__slide__cont">
-                <p class="home_fav__products__slick__slide__cont__name">
-                  {{product.name}}
-                </p>
-                <p class="home_fav__products__slick__slide__cont__price">
-                  ${{product.price}}
-                </p>
-              </div>
-            </a>
-          </div>
-          {% endfor %}
+  <div class="home">
+    <div class="container">
+      <section class="row home_lay">
+        <div class="col-md-12">
+          <h3 class="home_fav__products__heading">What's Your Favorite?</h3>
         </div>
-      </div>
-    </section>
+        <div class="col-12">
+          <div class="home_fav__products__slick">
+            {% for product in products %}
+            <div class="home_fav__products__slick__slide">
+              <a href="{% url 'detail' product.id %}">
+                <img
+                  src="{{product.image_url}}"
+                  alt="{{product.name}}"
+                  class="img_resp home_fav__products__slick__slide__img home_fav__products__slick__slide__cont__img"
+                />
+                <div class="home_fav__products__slick__slide__cont">
+                  <p class="home_fav__products__slick__slide__cont__name">
+                    {{product.name}}
+                  </p>
+                  <p class="home_fav__products__slick__slide__cont__price">
+                    ${{product.price}}
+                  </p>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}
