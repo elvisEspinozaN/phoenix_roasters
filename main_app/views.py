@@ -53,22 +53,7 @@ def signup(request):
         signup_form = SignupForm()
     return render(request, 'registration/signup.html', context={"signup_form": signup_form})
 
-
-
-# my approach
-# def shoppingcarts_add(request):
-#     quantity = int(request.POST.get('quantity'))
-#     shoppingcart = request.session.get('shoppingcarts_index', {})
-#     if id in shoppingcart:
-#         shoppingcart[id] = int(shoppingcart[id]) + quantity
-#     else:
-#         shoppingcart[id] = shoppingcart.get(id, quantity)
-#     request.session['shoppingcarts_index'] = shoppingcart
-#     return redirect(reverse('shoppingcarts_index'))
-
-# possible solution
 def shoppingcarts_index(request):
-    # return render(request, 'shoppingcarts/index.html')
     if request.user.is_authenticated:
         user=request.user
         order, created = Order.objects.get_or_create(user=user, complete=False)
@@ -78,36 +63,19 @@ def shoppingcarts_index(request):
     context = {'products': products}
     return render(request, 'shoppingcarts/index.html', context)
 
+@login_required
 def shoppingcarts_add(request, product_id):
     product = get_object_or_404(Product, id = product_id)
-    cartorder,created = CartOrder.objects.get_or_create(user=request.user, active=True)
-    cartorder.shoppingcarts_add(product)
+    quantity = request.POST.get('quantity')
+    order = Order.objects.get(user=request.user)
+    cartorder = CartOrder(order=order, product=product, quantity=quantity)
+    cartorder.save()
     return redirect('shoppingcarts_index')
-
-# def shoppingcarts_update(request):
-#     quantity = int(request.POST.get('quantity'))
-#     shoppingcart = request.session.get('shoppingcarts_index', {})
-#     if quantity > 0:
-#         shoppingcart[id] = quantity
-#     else:
-#         shoppingcart.pop(id)
-
-#     request.session['shoppingcarts_index'] = shoppingcart
-#     return redirect(reverse('shoppingcarts_index'))
-
 
 def shoppingcarts_delete(request, id):
     CartOrder.objects.filter(id=id).delete()
     messages.success(request, 'Your item has been delete')
     return HttpResponseRedirect('/shoppingcarts')
-
-# new approach
-# def cart_add(request, id):
-#     shoppingcart = Cart(request)
-#     product = Product.objects.get(id=id)
-#     shoppingcart.add(product=product)
-#     return redirect('shoppingcarts/index.html')
-
 
 
 def products_index(request):
@@ -177,11 +145,3 @@ class IndexView(ListView):
     template_name = 'shoppingcarts/index.html'
     context_object_name = 'product'
     queryset = Product.objects.all().prefetch_related('shoppingcarts_set.all')
-    
-# class CreateCart(CreateView):
-#     model = CartOrder
-#     template_name = 'shoppingcarts/index.html'
-
-# class CreateItemCart(CreateView):
-#     model = Product
-#     template_name = 'cartitem/create_cartitem.html'

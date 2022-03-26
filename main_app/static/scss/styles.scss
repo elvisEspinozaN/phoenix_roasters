@@ -63,12 +63,16 @@ $border-radius: 6px;
 
         &__cont {
           box-shadow: $pan-shadow;
-          background: $secondary-color;
+          background: $green-color;
           text-align: center;
+          color: $off-white-color;
           border-radius: $border-radius;
           padding: 12px;
-          &__name {
-            color: $white-color;
+          &:hover {
+            transition: $fast-transition;
+            text-decoration: none;
+            color: $off-white-color;
+            background-color: $primary-color;
           }
         }
       }
@@ -227,8 +231,10 @@ a {
 
     &:hover {
       text-decoration: none;
+      color: $off-white-color;
       h4 {
-        color: $primary-color;
+        background-color: $primary-color;
+        color: $off-white-color;
       }
     }
   }
@@ -246,7 +252,7 @@ a {
     &__name {
       transition: $fast-transition;
       padding: 12px;
-      background: $secondary-color;
+      background: $green-color;
       color: $white-color;
       text-shadow: $txt-shadow;
     }
