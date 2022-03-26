@@ -9,10 +9,10 @@
 
   <p align="center">
     <br />
-    <a href="#"><strong>View the Site »</strong></a>
+    <a href="https://phoenix-roasters.herokuapp.com/"><strong>View the Site »</strong></a>
     <br />
     <br />
-    <a href="#">View Repo »</a>
+    <a href="https://github.com/elvisEspinozaN/phoenix_roasters/tree/dev-elvis">View Repo »</a>
     
   </p>
 </div>
@@ -110,25 +110,17 @@ Your needs are ever changing, phoenix is able to grow along with you.
 
 [@psuedotrin](https://twitter.com/pseudotrin) - trinity@tforedev.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
 ### Long Lu
 
-[LinkedIn](https://www.linkedin.com/in/longplu/) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+[LinkedIn](https://www.linkedin.com/in/longplu/) - longplu1@gmail.com
 
 ### Papa Diop
 
 [LinkedIn](https://www.linkedin.com/in/papa-diop1/) - papamamadous@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
 ### Elvis Espinoza
 
 [LinkedIn](https://www.linkedin.com/in/elvis-espinoza/) - elvisespinoza98@yahoo.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
