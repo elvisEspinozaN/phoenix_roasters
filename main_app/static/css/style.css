@@ -19,7 +19,7 @@ footer {
 
 a,
 .nav-link {
-  color: #2f398e;
+  color: #0062cc;
   font: 12px;
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
@@ -196,6 +196,10 @@ h3 {
   border: 1px solid white;
   outline: none;
   font-size: small;
+}
+.but:hover {
+  border: 1px solid white;
+  color: #07315b;
 }
 
 p {
@@ -401,7 +405,6 @@ a:hover {
 
 .myform-area .form-area .myform-button .myform-btn:hover {
   background: #07315b;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
