@@ -336,11 +336,11 @@ a {
 
   &_add {
     background-color: $primary-color;
-    color: $black-color;
+    color: $off-white-color;
 
     &:hover {
       background: darken($primary-color, 15%);
-      color: lighten($black-color, 15%);
+      color: lighten($off-white-color, 15%);
     }
   }
 }

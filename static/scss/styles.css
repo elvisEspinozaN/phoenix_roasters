@@ -205,10 +205,10 @@ a {
     transform: scale(0.95); }
   .button_add {
     background-color: #d53030;
-    color: #000; }
+    color: #f2f2f2; }
     .button_add:hover {
       background: #991f1f;
-      color: #262626; }
+      color: white; }
 
 .sc_none {
   text-align: center; }
