@@ -1,93 +1,5 @@
 {% extends 'base.html'%} {% block content%}
 
-<!-- <div class="jumbotron" style="background-color: #343a40; background-size: 50%">
-  <div class="container for-about">
-    <h1 class="text-white">About Us</h1>
-    <hr style="color: rgb(255, 255, 255)" />
-  </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <br />
-      <br />
-      <br />
-
-      <img
-        id=""
-        class="d-block w-100 rounded"
-        src="../static/images/About.jpg"
-        alt="First slide"
-      />
-    </div>
-    <div class="col">
-      <br />
-      <br />
-      <br />
-      <h1 class="text-dark">Who we are</h1>
-
-      <p>
-        Established in 2022, we pride ourselves on finding authentic coffee,
-        ethically sourced. Our founders are passionate about bringing together
-        asthetic, flavor and community.
-      </p>
-    </div>
-  </div>
-</div>
-<br />
-<br />
-<section>
-  <h3 class="text-center text-dark">Meet Our Team</h3>
-  <h1 class="text-center text-dark">Behind the Taste</h1>
-
-  <br />
-  <br />
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <img
-          id=""
-          class="d-block w-100 rounded"
-          src="../static/images/Teams/Long.jpg"
-          alt="First slide"
-        />
-        <h1 class="text-dark">Long Lu</h1>
-        <i class="bi bi-github text-center"></i>
-        <i class="bi bi-linkedin text-center"></i>
-      </div>
-      <div class="col">
-        <img
-          id=""
-          class="d-block w-100 rounded"
-          src="../static/images/Teams/Trinity.jpg"
-          alt="First slide"
-        />
-        <h1 class="text-dark">Trinity Fore</h1>
-      </div>
-      <div class="col">
-        <img
-          id=""
-          class="d-block w-100 rounded"
-          src="../static/images/Teams/Elvis.jpg"
-          alt="First slide"
-        />
-        <h1 class="text-dark">Elvis Espinoza</h1>
-      </div>
-
-      <div class="col">
-        <img
-          id=""
-          class="d-block w-100 rounded"
-          src="../static/images/Teams//Papa Diop.jpg"
-          alt="First slide"
-        />
-
-        <h1 class="text-dark">Papa Diop</h1>
-      </div>
-    </div>
-  </div>
-</section> -->
 <div
   class="jumbotron"
   style="
@@ -102,14 +14,13 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="rounded col">
       <br />
       <br />
       <br />
-
       <img
         id=""
-        class="d-block w-100 rounded"
+        class="border border-primary shadow-lg p-3 mb-5 bg-white rounded d-block w-100 rounded"
         src="../static/images/About.jpg"
         alt="First slide"
       />
@@ -118,9 +29,10 @@
       <br />
       <br />
       <br />
-      <h1 class="text-dark">Who we are</h1>
-
-      <p>
+      <h1 class="who">Who we are</h1>
+      <br />
+      <br />
+      <p class="text-dark">
         Established in 2022, we pride ourselves on finding authentic coffee,
         ethically sourced. Our founders are passionate about bringing together
         asthetic, flavor and community.
@@ -131,12 +43,10 @@
 <br />
 <br />
 <section>
-  <h3 class="text-center text-dark">Meet Our Team</h3>
-  <h1 class="text-center text-dark">Behind the Taste</h1>
-
+  <h3 class="team1">Meet Our Team</h3>
+  <h1 class="team">Behind the Taste</h1>
   <br />
   <br />
-
   <div class="container">
     <div class="row">
       <div class="col">
@@ -146,9 +56,21 @@
           src="../static/images/Teams/Long.jpg"
           alt="First slide"
         />
-        <h1 class="text-dark">Long Lu</h1>
-        <i class="bi bi-github text-center"></i>
-        <i class="bi bi-linkedin text-center"></i>
+        <h1 id="long" class="long">Long Lu</h1>
+        <div
+          style="width: 100%; text-align: center"
+          class="small-4 medium-4 large-4 columns"
+        >
+          <a
+            class="bi bi-github text-center text-muted"
+            href="https://github.com/longplu"
+            style="text-align: center"
+          ></a>
+          <a
+            class="bi bi-linkedin text-center text-muted"
+            href="https://www.linkedin.com/in/longplu/"
+          ></a>
+        </div>
       </div>
       <div class="col">
         <img
@@ -157,7 +79,21 @@
           src="../static/images/Teams/Trinity.jpg"
           alt="First slide"
         />
-        <h1 class="text-dark">Trinity Fore</h1>
+        <h1 id="long" class="long">Trinity Fore</h1>
+        <div
+          style="width: 100%; text-align: center"
+          class="small-4 medium-4 large-4 columns"
+        >
+          <a
+            class="bi bi-github text-center text-muted"
+            href="https://github.com/Trinityfore"
+            style="text-align: center"
+          ></a>
+          <a
+            class="bi bi-linkedin text-center text-muted"
+            href="https://www.linkedin.com/in/trinityfore/"
+          ></a>
+        </div>
       </div>
       <div class="col">
         <img
@@ -166,9 +102,22 @@
           src="../static/images/Teams/Elvis.jpg"
           alt="First slide"
         />
-        <h1 class="text-dark">Elvis Espinoza</h1>
+        <h1 id="elvis" class="long" class="text-dark">Elvis Espinoza</h1>
+        <div
+          style="width: 100%; text-align: center"
+          class="small-4 medium-4 large-4 columns"
+        >
+          <a
+            class="bi bi-github text-center text-muted"
+            href="https://github.com/elvisEspinozaN"
+            style="text-align: center"
+          ></a>
+          <a
+            class="bi bi-linkedin text-center text-muted"
+            href="https://www.linkedin.com/in/elvis-espinoza/"
+          ></a>
+        </div>
       </div>
-
       <div class="col">
         <img
           id=""
@@ -176,10 +125,24 @@
           src="../static/images/Teams//Papa Diop.jpg"
           alt="First slide"
         />
-
-        <h1 class="text-dark">Papa Diop</h1>
+        <h1 id="long" class="long" class="text-dark">Papa Diop</h1>
+        <div
+          style="width: 100%; text-align: center"
+          class="small-4 medium-4 large-4 columns"
+        >
+          <a
+            class="bi bi-github text-center text-muted"
+            href="https://github.com/diopp"
+            style="text-align: center"
+          ></a>
+          <a
+            class="bi bi-linkedin text-center text-muted"
+            href="https://www.linkedin.com/in/papa-diop1/"
+          ></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<br />
 {% endblock %}
